@@ -50,7 +50,7 @@ else {Console.WriteLine("Число не являеться трехзначны
 14, 5 => нет, 4
 16, 8 => да
 4, 3 => нет, 1
-*/
+----------
 Console.WriteLine("Введите 2 числа");
 int num1 = Convert.ToInt32(Console.ReadLine());
 int num2 = Convert.ToInt32(Console.ReadLine());
@@ -60,3 +60,23 @@ if (num1 % num2 == 0)
 Console.WriteLine("Да");
 }
 else {Console.WriteLine("Нет, "+ num1 % num2);}
+*/
+
+/*
+Напишите программу, которая выводит третью с
+конца цифру заданного числа или сообщает, что
+третьей цифры нет.
+456 => 6
+7812 => 8
+91 => Третьей цифры нет
+----------
+Console.WriteLine("Введите число");
+int num = Convert.ToInt32(Console.ReadLine());
+
+if (num > 99)
+{
+ int n1 = (num % 1000 - num % 100 ) / 100;  
+ Console.WriteLine(n1); 
+}
+else {Console.WriteLine("Третьей цифры нет");}
+*/
