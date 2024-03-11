@@ -55,7 +55,7 @@ else { Console.WriteLine("некратно "+num1 % num2); }
 14 -> нет
 46 -> нет
 161 -> да
-*/
+
 Console.WriteLine("Введите число");
 int num = Convert.ToInt32(Console.ReadLine());
 
@@ -64,3 +64,23 @@ if (num % 7 == 0 && num % 23 ==0)
     Console.WriteLine("да");
 }
 else {    Console.WriteLine("нет");}
+*/
+/*
+Напишите программу, которая принимает на вход два числа и проверяет, 
+является ли одно число квадратом другого.
+5, 25 -> да
+-4, 16 -> да
+25, 5 -> да
+8,9 -> нет
+*/
+
+Console.WriteLine("Введите 2 числа");
+int num1 = Convert.ToInt32(Console.ReadLine());
+int num2 = Convert.ToInt32(Console.ReadLine());
+
+
+if (Math.Pow(num1, 2) == num2 || Math.Pow(num2, 2) == num1 )
+{ 
+ Console.WriteLine("Да");   
+}
+ else {Console.WriteLine("Нет");}
