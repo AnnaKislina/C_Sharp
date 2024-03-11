@@ -38,7 +38,7 @@ Console.WriteLine(num1 *10 + num2);
 34, 5 -> некратно, остаток 4
 16, 4 -> кратно
 
-*/
+
 Console.WriteLine("Введите 2 числа");
 int num1 = Convert.ToInt32(Console.ReadLine());
 int num2 = Convert.ToInt32(Console.ReadLine());
@@ -48,3 +48,19 @@ if (num1 % num2 ==0)
  Console.WriteLine("кратно");   
 }
 else { Console.WriteLine("некратно "+num1 % num2); }
+*/
+/*
+14. Напишите программу, которая принимает на вход число
+ и проверяет, кратно ли оно одновременно 7 и 23.
+14 -> нет
+46 -> нет
+161 -> да
+*/
+Console.WriteLine("Введите число");
+int num = Convert.ToInt32(Console.ReadLine());
+
+if (num % 7 == 0 && num % 23 ==0)
+{
+    Console.WriteLine("да");
+}
+else {    Console.WriteLine("нет");}
