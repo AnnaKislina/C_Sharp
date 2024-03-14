@@ -129,4 +129,49 @@ else
 {
 Console.WriteLine(currentDigit);
 }
+----------------------------------------------------*/
+
+/*
+4.Составить программу:
+ а) вычисления значения функции y=7x2+3x+6 при любом значении x;
+ б) вычисления значения функции x=12a2+7a+12 при любом значении а.
+
+Console.Write("Введите число:");
+int a = Convert.ToInt32(Console.ReadLine());
+
+int x = 12 * a * 2 + 7 * a + 12;
+int y = 7 * x * 2 + 3 * x + 6 ;
+Console.Write(x + " "+ y);
 */
+
+/*
+5. Дана сторона квадрата. Найти его периметр.
+
+Console.Write("Введите сторону квадрата:");
+int x = Convert.ToInt32(Console.ReadLine());
+
+Console.Write(4 * x);
+*/
+
+/*
+6. Дан радиус окружности. Найти ее диаметр.
+
+Console.Write("Введите радиус окружности:");
+int x = Convert.ToInt32(Console.ReadLine());
+
+Console.Write(2 * x);
+*/
+
+/*
+8. Известны количество жителей в государстве и 
+площадь его территории. Определить плотность населения в этом государстве.
+
+
+Console.Write("количество жителей ");
+double kol = Convert.ToDouble(Console.ReadLine());
+Console.Write("площадь его территории ");
+double pl = Convert.ToDouble(Console.ReadLine());
+
+Console.Write(kol / pl);
+*/
+
