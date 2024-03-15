@@ -11,7 +11,7 @@ for (int i = 0; i < arr.Length ; i++)
 {
     arr[i] = new Random().Next (1, 101);
     Console.Write($"{arr[i]} ");
-    if (arr[i] >= 10 && arr[i] <= 90)
+    if (arr[i] >= 20 && arr[i] <= 90)
         {count = count + 1;}
 }
 System.Console.WriteLine();
