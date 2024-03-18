@@ -17,20 +17,27 @@ void PrintArray(int[] arrayToPrint)
     Console.WriteLine();
 }
 
-int[] arr = new int[1];
+string num1 = "";
+int num2;
+
+List<int> Spisok = new List<int>();
 int size = 0;
-var num = 0;
 
-void FillArray (int[] arr, int saze_fill)
-{
-System.Console.WriteLine("Введите элемент массива");
-arr[saze_fill] = Convert.ToInt32(Console.ReadLine());
-//return arr;  
-}
+while (true) // Бесконечный цикл
+{   int sum = 0;
+    Console.Write("Введите элемент массива");
+    num1 = Console.ReadLine();
+    if (num1 == "q") // Проверка на ввод 'q' для выхода
+        {
+        break;
+        }
+    int.TryParse(num1, out num2);
+    while (num2 > 0)
+        {sum =sum + num2 % 10; 
+        num2 = num2 / 10;} 
+    if (sum % 2 == 0) {break;}
 
-while (num != "q" )
-{
-    FillArray(arr, size);
-    PrintArray(arr);
-    size = size + 1;
+    //Spisok[0] = num2;
+
+    Console.Write($"{num2} ");
 }
