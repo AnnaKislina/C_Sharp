@@ -46,3 +46,25 @@ ZeroCvenMass(array);
 PrintMass(array);
 */
 /*----------------------------------------*/
+
+int[] array = new int[10];
+
+void ZapolArray (int n_gr, int v_gr, int arr[])
+{
+for (int i = 0; i < arr.Length ; i++)
+{
+    arr[i] = new Random().Next (n_gr, v_gr);
+ }    
+}
+
+/*----------------------------------------*/
+void PrintArray (int arr[])
+{
+for (int i = 0; i < arr.Length ; i++)
+{
+    Console.Write($"{arr[i]} ");
+}
+}
+
+ZapolArray(1 , 10, array[]);
+PrintArray(array[]);
