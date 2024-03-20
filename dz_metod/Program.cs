@@ -78,12 +78,12 @@ System.Console.WriteLine(CountEven(user_arr));
 (первый элемент станет последним, второй – предпоследним и т.д.) */
 void ReversArray(int[] array)
 { int n = 0;
- for (int i = 0; i < array.length; i++)
+ for (int i = 0; i < array.Length/2; i++)
  {
-    n = array[array.length - 1 - i];
-    array[array.length - 1 - i] = array[i];
+    n = array[array.Length - 1 - i];
+    array[array.Length - 1 - i] = array[i];
     array[i] = n;
- }   
+ } 
  }
 
 int[] user_arr = new int[10];
