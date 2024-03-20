@@ -32,6 +32,21 @@ void Print2Array(int[,] arrayToPrint) // печать 2-массива
     }
 }
 
+   
+void PrintArray(int[] arrayToPrint)   // печать 1-массива
+{
+    Console.Write("[");
+    for (int i = 0; i < arrayToPrint.Length; i++)
+    {
+        Console.Write(arrayToPrint[i]);
+        if (i != arrayToPrint.Length - 1)
+        {
+            Console.Write(", ");
+        }
+    }
+    Console.Write("]");
+    Console.WriteLine();
+}
 //int[,] table = Fill2Array(3,5);
 //Print2Array(table);
 //-----------------------------------------------------------
@@ -55,3 +70,50 @@ foreach (int e in table)
     {System.Console.Write($"{e} ,");} 
 }
  */
+
+ //------------------------------------------
+//------------СТРОКИ------------------------------
+//------------------------------------------
+string CreatString (string s)  // Возрощает только буквы из строки
+{
+   string letters  = "";
+   foreach (char e in s) 
+   {if (char.IsAsciiLetter(e) == true)
+        {
+          letters = letters + e;  
+        }
+   }
+   return letters;
+}
+
+//System.Console.WriteLine("Введите строку");
+//string st = Console.ReadLine();
+//System.Console.WriteLine(CreatString(st));
+
+
+string CreatStringNumb (string s)  // Возрощает только цыфры из строки
+{
+   string letters  = "";
+   foreach (char e in s) 
+   {if (char.IsAsciiDigit(e) == true)
+        {
+          letters = letters + e;  
+        }
+   }
+   return letters;
+}
+
+int[] StrToArrInt (string str)    //Преобразует строку в массив чисел
+{int[] arr = new int[str.Length];
+    for (int i = 0; i < str.Length; i++)
+    {
+        arr[i] = Convert.ToInt32(str.Substring(i, 1));
+    }
+    return arr;
+}
+
+System.Console.WriteLine("Введите строку");
+string st = Console.ReadLine();
+string st_numb = CreatStringNumb(st);
+int[] arr_user = StrToArrInt(st_numb);
+PrintArray(arr_user);
