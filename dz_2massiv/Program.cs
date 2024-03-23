@@ -138,3 +138,42 @@ Print2Array(table);
 int[,] table2 = DelStrStolbMin(table);
 System.Console.WriteLine();
 Print2Array(table2);
+
+//---------------------------------------------------------------------------
+/*------------ЗАДАНИЕ ИЗ АВТОТЕСТОВ----------------------------------------*/
+//---------------------------------------------------------------------------
+/* Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, 
+и возвращает значение этого элемента или же указание, что такого элемента нет: 
+"Позиция по рядам выходит за пределы массива"
+или
+"Позиция по колонкам выходит за пределы массива"
+
+Позиции в массиве считать от единицы. */
+
+class UserInputToCompileForTest
+{ 
+// Поиск элемента по позициям
+    public static int FindElementByPosition(int[,] array, int x, int y)
+    { 
+      int num = array[x-1,y-1];
+      return num;
+    }
+// Проверка позиций на вхождение в массив
+    public static bool ValidatePosition(int[,] array, int x, int y)
+    { bool status = false;
+      if(x < array.GetLength(0) && y < array.GetLength(1))
+      {status = true;}
+      return status;
+    }
+
+  public static void PrintResult(int[,] numbers, int x, int y)
+    {
+        if (ValidatePosition(numbers,x,y))
+        {Console.WriteLine(FindElementByPosition(numbers,x,y));}
+        if(x > numbers.GetLength(0))
+         {Console.WriteLine("Позиция по рядам выходит за пределы массива");}
+         if(y > numbers.GetLength(1))
+         {Console.WriteLine("Позиция по колонкам выходит за пределы массива");}
+           
+    }
+}
