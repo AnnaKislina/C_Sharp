@@ -108,7 +108,7 @@ System.Console.WriteLine($"Строка с мин = {IndexMin2Array(table)}");*/
 понимается создание нового двумерного массива без
 строки и столбца */
 
-int[,] DelStrStolbMin (int[,] arr) //удалит строку и столбец с мин
+/*int[,] DelStrStolbMin (int[,] arr) //удалит строку и столбец с мин
 {   int[,] arr2 = new int[arr.GetLength(0)-1,arr.GetLength(1)-1];
     int index_i = 0;
     int index_j = 0;
@@ -132,12 +132,17 @@ int[,] DelStrStolbMin (int[,] arr) //удалит строку и столбец
     }    
 return arr2;
 }
+*/
 
 int[,] table = Fill2Array(3,3);
 Print2Array(table);
 int[,] table2 = DelStrStolbMin(table);
 System.Console.WriteLine();
 Print2Array(table2);
+
+
+
+
 
 //---------------------------------------------------------------------------
 /*------------ЗАДАНИЕ ИЗ АВТОТЕСТОВ----------------------------------------*/
@@ -149,7 +154,7 @@ Print2Array(table2);
 "Позиция по колонкам выходит за пределы массива"
 
 Позиции в массиве считать от единицы. */
-
+/*
 class UserInputToCompileForTest
 { 
 // Поиск элемента по позициям
@@ -177,3 +182,4 @@ class UserInputToCompileForTest
            
     }
 }
+*/

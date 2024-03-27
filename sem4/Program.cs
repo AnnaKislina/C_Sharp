@@ -111,3 +111,6 @@ int GetNumber (int[] arr)
     return rezult;
 }
 System.Console.WriteLine(GetNumber(user_arr)); */
+
+int[] array = FillArray(5);
+PrintArray(array);
