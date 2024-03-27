@@ -182,4 +182,103 @@ class UserInputToCompileForTest
            
     }
 }
+<<<<<<< HEAD
 */
+=======
+
+
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+/* Задайте прямоугольный двумерный массив. 
+Напишите программу, которая будет находить 
+строку с наименьшей суммой элементов. */
+class UserInputToCompileForTest
+{
+    /// Вычисление сумм по строкам (на выходе массив с суммами строк)
+    public static int[] SumRows(int[,] array)
+    { 
+      int[] arr = new int[array.GetLength(0)];
+      for (int i = 0; i < array.GetLength(0) ; i++)
+      {  int sum = 0;
+         for (int j = 0; j < array.GetLength(1) ; j++)
+         {
+            sum = sum + array[i,j];
+         } 
+         arr[i] = sum;
+       }
+       return arr;
+    }
+    
+    // Получение индекса минимального элемента в одномерном массиве
+    public static int MinIndex(int[] array)
+    {  int minIndx = 0 ;
+       int min = array[0];
+       for (int i = 0; i < array.Length; i++)
+       {
+           if (array[i] < min)
+           {
+             minIndx = i;
+             min = array[i];
+           }
+       }
+     return minIndx;
+    }
+ 
+    public static void PrintResult(int[,] numbers)
+    {  
+      int[] arr = SumRows(numbers);
+      int minI = MinIndex(arr);
+       Console.WriteLine(minI); 
+    }
+}
+
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+/* Задайте двумерный массив. Напишите программу, 
+которая поменяет местами первую и последнюю строку массива. */
+
+class UserInputToCompileForTest
+{
+    // Печать массива
+    public static void PrintArray(int[,] array)
+    {
+       for (int j = 0; j < array.GetLength(0); j++)
+      {
+          for (int i = 0; i < array.GetLength(1); i++)
+          {
+              Console.Write($"{array[j, i]}\t");
+           }
+        Console.WriteLine();
+       }
+     }
+
+// Обмен первой с последней строкой
+    public static int[,] SwapFirstLastRows(int[,] array)
+    {   
+
+      for (int j = 0; j < array.GetLength(0); j++)
+      {
+          for (int i = 0; i < array.GetLength(1); i++)
+          {
+              SwapItems(array, i);     
+           }
+       }
+      int[,] arrRezult = array;
+       return arrRezult;
+    }
+
+// Обмен элементами массива
+    public static void SwapItems(int[,] array, int i)
+    {
+      var tmp = array[array.GetLength(0) - 1, i];
+      array[array.GetLength(0) - 1, i] = array[0, i];
+      array[0, i] = tmp;
+    }
+
+    public static void PrintResult(int[,] numbers)
+    {
+       int[,] arr = SwapFirstLastRows(numbers);
+       PrintArray(arr);
+    }
+}
+
