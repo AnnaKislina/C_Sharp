@@ -15,7 +15,6 @@ for (int i = 0; i < arr.GetLength(0) ; i++)
 return arr;
 }
 
-
 void Print2DArray(int[,] array)  //печать 2-массива
 {
     for (int i = 0; i < array.GetLength(0); i++)
@@ -28,8 +27,22 @@ void Print2DArray(int[,] array)  //печать 2-массива
     }
 }
 
+void PrintArray(int[] arrayToPrint)
+{
+    Console.Write("[");
+    for (int i = 0; i < arrayToPrint.Length; i++)
+    {
+        Console.Write(arrayToPrint[i]);
+        if (i != arrayToPrint.Length - 1)
+        {
+            Console.Write(", ");
+        }
+    }
+    Console.Write("]");
+    Console.WriteLine();
+}
 
-/* Задача 3. В заданной строке текста определите 
+/* Задача . В заданной строке текста определите 
 количество слов. Каждое слово отделено друг от друга пробелом.*/
 
 /* System.Console.WriteLine("Введите что нибудь");
@@ -45,14 +58,7 @@ System.Console.WriteLine(count);
 //--------------------------------------------------------------
 /* В массиве строк (список фамилий) определите самую длинную фамилию. */
 
-string[] array = ["Петров","Иванов","Сидоров","Путин","Копиленов"];
-
-
-/* for(int i = 0; i < stringArray.Length; i++)
-{
-   stringArray[i] = Console.ReadLine();
-
-} */
+/* string[] array = ["Петров","Иванов","Сидоров","Путин","Копиленов"];
 
 int maxInd = 0;
 int maxDl = array[0].Length;
@@ -66,3 +72,13 @@ for (int i = 0; i < array.Length; i++)
     }
 }
 System.Console.WriteLine(array[maxInd]); 
+ */
+//-----------------------------------------
+/* for(int i = 0; i < stringArray.Length; i++)
+{
+   stringArray[i] = Console.ReadLine();
+
+} */
+//------------------------------------------
+//------------------------------------------
+//------------------------------------------
