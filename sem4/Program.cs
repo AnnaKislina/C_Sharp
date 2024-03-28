@@ -19,14 +19,16 @@ for (int i = 0; i < arr.Length ; i++)
 System.Console.Write($"{arr[i]} ");
  }    
 ---------------------------------------------------------------------------------}*/
-/*
+
 int CountEven (int[] arr)
 {
     int rezult = 0;
     for (int i = 0; i < arr.Length; i++)
     {
-        if (arr[i] % 2 == 0)
-        {rezult++;}
+        if (arr[i] % 2 == 0) 
+        {
+            rezult++;
+        }    
     }
     return rezult;
 }
