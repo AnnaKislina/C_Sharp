@@ -20,8 +20,9 @@ return arr;
 }
 
 
-void Print2Array(int[,] arrayToPrint) // печать 2-массива
-{for (int j = 0; j < arrayToPrint.GetLength(0); j++)
+void Print2Array(int[,] arrayToPrint)   // печать 2-массива
+{
+    for (int j = 0; j < arrayToPrint.GetLength(0); j++)
     {Console.Write("[");
     for (int i = 0; i < arrayToPrint.GetLength(1); i++)
         {

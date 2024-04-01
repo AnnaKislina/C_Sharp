@@ -3,9 +3,9 @@
 
 
 
-void PrintArray (int[] arr, int i = 0)
+void PrintArray (int[] arr, int i = - 1)
 {
-    if ( i == arr.Length - 1 )
+    if ( i == arr.Length - 1)
     {
         return;
     }
